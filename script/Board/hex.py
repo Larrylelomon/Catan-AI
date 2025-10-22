@@ -30,3 +30,6 @@ class Hexagon:
 
     def setsettlement(self,settlement):
         self.settlement = settlement
+
+    def updateboard(self):
+        

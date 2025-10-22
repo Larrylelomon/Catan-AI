@@ -1,4 +1,4 @@
-from Board.list import list
+from Board import list
 
 board = list.getboardset()
 
@@ -41,8 +41,11 @@ class Weights:
                 "desert": 0.0
             }
         
-        return weights.get(resource, 0.0)
+        return weights
 
+    def get_resource_weight(self, index):
+        weights = self.weightrealignment()
+        return weights[self.board[index][1]]
 
     def calculate_hex_weights(self):
         """Calculate weighted value for all hexes"""
@@ -59,3 +62,4 @@ class Weights:
         
         return self.weightings
 
+    def calculate_points_weight(self)
